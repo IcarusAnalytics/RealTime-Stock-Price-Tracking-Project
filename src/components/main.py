@@ -84,7 +84,7 @@ def real_time():
 
 
 if __name__ == "__main__":
-    symbols = ['AAPL', 'GOOGL', 'MSFT']
+    symbols = ['AAPL', 'GOOGL', 'MSFT', 'TSLA','NVDA']
     threads = []
 
     for symbol in symbols:
@@ -99,4 +99,4 @@ if __name__ == "__main__":
     consumer_thread = threading.Thread(target=consume_stock_prices)
     consumer_thread.start()
 
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
